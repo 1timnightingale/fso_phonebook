@@ -40,9 +40,9 @@ const App = () => {
       setFilterName('')
     }
     else {
-      setFilterName(event.target.value)
-      const filteredPersons = persons.filter((person) => RegExp(filterName, 'i').test(person.name))
+      const filteredPersons = persons.filter((person) => RegExp(event.target.value, 'i').test(person.name))
       setDisplayPersons(filteredPersons)
+      setFilterName(event.target.value)
     }
   }
 
